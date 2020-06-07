@@ -2,4 +2,4 @@
 
 Dotfiles from my Arch Linux setup on ThinkPad X220
 
-![Alt text](/pic/screen.png)
+![Alt text](/pic/screen.png?raw=true "Screenshot")
