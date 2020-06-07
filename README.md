@@ -2,4 +2,4 @@
 
 Dotfiles from my Arch Linux setup on ThinkPad X220
 
-![ScreenShot](/pic/screen.png)
+<img src="pic/screen.png">
