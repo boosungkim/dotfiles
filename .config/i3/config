@@ -33,16 +33,17 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 # bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioRaiseVolume exec amixer -q -M set Master 5%+ unmute && pkill -RTMIN+10 i3blocks
+# XF86AudioRaiseVolume/XF86audioLowerVolume/XF86AudioMute/XF86AudioMicMute for normal ThinkPads
+bindsym $mod+plus exec amixer -q -M set Master 5%+ unmute && pkill -RTMIN+10 i3blocks
 
 # bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec amixer -q -M set Master 5%- unmute && pkill -RTMIN+10 i3blocks
+bindsym $mod+minus  exec amixer -q -M set Master 5%- unmute && pkill -RTMIN+10 i3blocks
 
 # bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMute exec amixer -q set Master toggle
+bindsym $mod+Shift+minus exec amixer -q set Master toggle
 
 # bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec amixer -q set Capture toggle
+bindsym $mod+Shift+plus exec amixer -q set Capture toggle
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -92,7 +93,15 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+b fullscreen toggle
+
+# browser shortcuts
+bindsym $mod+Shift+F1 exec "firefox -P professional"
+bindsym $mod+Shift+F2 exec "firefox -P work"
+bindsym $mod+Shift+F3 exec "firefox -P social"
+bindsym $mod+Shift+F4 exec "firefox -P banking"
+bindsym $mod+Shift+F5 exec "chromium"
+bindsym $mod+Shift+F6 exec "qutebrowser"
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
