@@ -103,6 +103,9 @@ bindsym $mod+Shift+F4 exec "firefox -P banking"
 bindsym $mod+Shift+F5 exec "chromium"
 bindsym $mod+Shift+F6 exec "qutebrowser"
 
+# ranger
+bindsym $mod+Shift+F9 exec "termite -e 'ranger'"
+
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
