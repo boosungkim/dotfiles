@@ -1,0 +1,16 @@
+[Desktop Entry]
+Comment[en_US]=autostart ibus
+Comment=autostart ibus
+Exec=/home/boosung/.config/autostart/start-ibus.sh
+GenericName[en_US]=
+GenericName=
+MimeType=
+Name[en_US]=Start IBus
+Name=Start IBus
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
