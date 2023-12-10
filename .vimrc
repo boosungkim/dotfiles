@@ -2,7 +2,7 @@ set nocompatible
 filetype plugin on
 syntax on
 
-let g:vimwiki_list = [{'path': '~/Documents/work/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [{'path': '~/Documents/work/vimwiki', 'syntax': 'default', 'ext': '.md'}]
 
 call plug#begin()
 
