@@ -1,6 +1,7 @@
 set nocompatible
 filetype plugin on
 syntax on
+set linebreak
 
 let g:vimwiki_list = [{'path': '~/Documents/work/vimwiki', 'syntax': 'default', 'ext': '.md'}]
 
